@@ -1,0 +1,11 @@
+SELECT worker_id, first_name, department, salary 
+FROM Worker 
+WHERE salary BETWEEN 50000 AND 200000;
+
+SELECT * FROM Worker 
+WHERE JOINING_DATE BETWEEN '2014-02-01' AND '2014-02-28';
+
+SELECT * FROM Worker 
+WHERE DEPARTMENT IN ('HR', 'Account');
+
+select min(salary) from worker where department='admin' and first_name not like 'A%';
