@@ -1,0 +1,55 @@
+use vitcampus;
+CREATE TABLE Persons (
+    ID int NOT NULL,
+    LastName varchar(255) unique not null,
+    FirstName varchar(255) NOT NULL,
+    Age int
+);
+desc persons;
+
+insert into persons values (101,'V','Jayanth',null);
+select * from persons;
+
+ALTER TABLE Persons
+ADD UNIQUE (AGE);
+
+ALTER TABLE Persons
+DROP CONSTRAINT Age;
+
+ALTER TABLE Persons	
+ADD CHECK (Age>=18);
+
+ALTER TABLE Person 
+ADD PRIMARY KEY (ID);
+
+ALTER TABLE Person 
+DROP PRIMARY KEY;
+
+create table category(
+cid int primary key,
+cname varchar(100) not null
+);
+
+insert into category values (101,'electronics'),(102,'Home App');
+
+select * from category;
+drop table products;
+CREATE TABLE products (
+    pid int primary key,
+    pname varchar(100) NOT NULL,
+    cid int, 
+    FOREIGN KEY (cid) REFERENCES category(cid)
+);
+desc products;
+
+delete from category where cid=101;
+update 
+
+insert into products values (504,'Power Bank Samsung',64-bit encry key);
+
+select * from products;
+
+ 
+
+
+
